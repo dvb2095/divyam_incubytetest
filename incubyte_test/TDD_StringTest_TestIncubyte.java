@@ -30,6 +30,13 @@ public class TDD_StringTest_TestIncubyte {
 	public void checkunknownamountofnumbers() {
 		ProdTestIncubyte prod = new ProdTestIncubyte();
 		assertEquals(6, prod.Add("2,2,2"));
-		assertEquals(15, prod.Add("4,5,6"));
+		assertEquals(45, prod.Add("1,2,3,4,5,6,7,8,9"));
+	}
+	
+	@Test
+	public void checkHandleNewLine() {
+		ProdTestIncubyte prod = new ProdTestIncubyte();
+		assertEquals(6, prod.Add("2,2,\n2"));
+		assertEquals(45, prod.Add("1,2,3\n,4,5,\n6,7,8,\n9"));
 	}
 }
