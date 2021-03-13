@@ -7,7 +7,7 @@ public class ProdTestIncubyte {
 		}
 		else if (numbers.length() > 1) {
 			int sum = 0;
-			String tempstring = numbers.replace("\n", ""); 
+			String tempstring = numbers.replace("\n//\\;", ""); 
 			for(int i = 0; i < tempstring.length(); i++) {
 				char temp = tempstring.charAt(i);
 				if(Character.isDigit(temp)) {

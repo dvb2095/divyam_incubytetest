@@ -39,4 +39,11 @@ public class TDD_StringTest_TestIncubyte {
 		assertEquals(6, prod.Add("2,2,\n2"));
 		assertEquals(45, prod.Add("1,2,3\n,4,5,\n6,7,8,\n9"));
 	}
+	
+	@Test
+	public void checkdelimiter() {
+		ProdTestIncubyte prod = new ProdTestIncubyte();
+		assertEquals(6, prod.Add("2;,2,\n2"));
+		assertEquals(45, prod.Add("//1,;2,3\n,4,\\5,\n6,7,;8,\n9"));
+	}
 }
