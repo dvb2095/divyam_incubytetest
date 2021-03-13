@@ -6,8 +6,15 @@ public class ProdTestIncubyte {
 			return 0;
 		}
 		else if (numbers.length() > 1) {
-			String[] num = numbers.split(",");
-			return Integer.parseInt(num[0]) + Integer.parseInt(num[1]);
+			int sum = 0;
+			for(int i = 0; i < numbers.length(); i++) {
+				char temp = numbers.charAt(i);
+				if(Character.isDigit(temp)) {
+				int temp2 = Character.getNumericValue(temp);
+				sum = sum + temp2;
+				}
+			}
+			return sum;
 		}
 		else {
 			return Integer.parseInt(numbers);	
